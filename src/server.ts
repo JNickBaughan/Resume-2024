@@ -16,7 +16,28 @@ server.get("/", (_: Request, res: Response) => {
   res.send(`
   <!DOCTYPE html>
   <html>
-    <head></head>
+    <head>
+    <style>
+      html, body {
+        height: 100%;
+        overflow: hidden;
+        font-family: arial, sans-serif;
+        box-sizing: border-box;
+      }
+
+      body::-webkit-scrollbar {
+          display: none;
+      }
+
+      #root {
+        max-width: 1200px;
+        margin: 0 auto; 
+        height: 96vh;
+        padding: 1px 0;
+      }
+    </style>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    </head>
     <body>
       <div id="root" />
       <div>HELLO WORLD!!</div>

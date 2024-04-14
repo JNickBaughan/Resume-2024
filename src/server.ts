@@ -21,8 +21,8 @@ server.get("/", (_: Request, res: Response) => {
       html, body {
         height: 100%;
         overflow: hidden;
-        font-family: arial, sans-serif;
         box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
       }
 
       body::-webkit-scrollbar {
@@ -40,7 +40,6 @@ server.get("/", (_: Request, res: Response) => {
     </head>
     <body>
       <div id="root" />
-      <div>HELLO WORLD!!</div>
       <script src="bundle.js"></script>
     </body>
   </html>

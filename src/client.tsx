@@ -2,12 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom";
 import * as stylex from '@stylexjs/stylex';
 
+import { NavigationBar } from "./components/NavigationBar";
+
 const styles = stylex.create({
 	mainContainer: {
-		borderRadius: '3px;',
 		position: 'relative',
-		overflow: 'hidden'
+		overflow: 'hidden',
+		height: '100%',
+		marginTop: '150px'
 	  },
+
 	  scrollContainer: {
 		overflow: "hidden",
 		position: "absolute",
@@ -17,43 +21,42 @@ const styles = stylex.create({
 		paddingRight: '20px',
 		overflowY: "scroll"
 	  },
+	  sectionWrapper: {
+		minHeight: "150px",
+		marginTop: "8px",
+		backgroundColor: "green"
+	  },
+	  sectionContainer: {}
+
 });
 
-const App = ({ text }: { text: string }) => {
+const App = () => {
  return (
 	<div {...stylex.props(styles.mainContainer)}>
+		<NavigationBar />
 		<div {...stylex.props(styles.scrollContainer)}>
-			<p>{text}</p>
-			<br />
-			<div>{text}</div>
-            <br />
-			<div>{text}</div>
-            <br />
-			<div>{text}</div>
-            <br />
-			<div>{text}</div>
-            <br />
-			<div>{text}</div>
-            <br />
-			<div>{text}</div>
-            <br />
-			<div>{text}</div>
-            <br />
-			<div>{text}</div>
-            <br />
-			<div>{text}</div>
-            <br />
-			<div>{text}</div>
-            <br />
-			<div>{text}</div>
-            <br />
-			<br />
-			<div>{text}</div>
-            <br />
-			<div>{text}</div>
+
+			{/* <div {...stylex.props(styles.sectionWrapper)}>
+				<p>{text}</p>
 			</div>
-    </div>
- 		);
+			<br />
+			<div {...stylex.props(styles.sectionWrapper)}>
+				<p>{text}</p>
+			</div>
+            <br />
+			<div {...stylex.props(styles.sectionWrapper)}>
+				<p>{text}</p>
+			</div>
+            <br />
+			<div {...stylex.props(styles.sectionWrapper)}>
+				<p>{text}</p>
+			</div>
+            <br />
+			<div {...stylex.props(styles.sectionWrapper)}>
+				<p>{text}</p>
+			</div> */}
+		</div>
+    </div>);
 };
 
-ReactDOM.render(<App text={"React: hello world"} />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));

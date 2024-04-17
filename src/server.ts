@@ -30,7 +30,7 @@ server.get("/", (_: Request, res: Response) => {
       }
 
       #root {
-        max-width: 1200px;
+        max-width: 1550px;
         margin: 0 auto; 
         height: 96vh;
         padding: 1px 0;
@@ -38,8 +38,7 @@ server.get("/", (_: Request, res: Response) => {
     </style>
     <link rel="stylesheet" type="text/css" href="styles.css" />
     </head>
-    <body>
-      <div id="root" />
+    <body id="root" >
       <script src="bundle.js"></script>
     </body>
   </html>
